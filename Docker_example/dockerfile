@@ -1,0 +1,6 @@
+#base iamge
+FROM openjdk:8
+COPY . /src/java
+WORKDIR /src/java
+RUN ["javac", "Calculator.java"]
+ENTRYPOINT ["java", "Calculator"]
